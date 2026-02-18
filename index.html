@@ -1,189 +1,130 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuezCanalLogistics.com | Premium Investment Opportunity</title>
+    <title>SuezCanalLogistics.com | الشراكة الرقمية الاستراتيجية 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --navy-dark: #0a192f;
-            --navy-light: #112240;
-            --gold: #d4af37;
-            --white: #e6f1ff;
-            --gray: #8892b0;
-        }
+        :root { --gold: #c5a059; --navy: #050a12; --white: #ffffff; --card-bg: rgba(255, 255, 255, 0.03); }
+        body { margin: 0; padding: 0; background: var(--navy); color: white; font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
+        
+        /* الهوية البصرية Snap the Name */
+        .brand-logo { position: absolute; top: 25px; right: 25px; z-index: 100; }
+        .brand-logo img { width: 150px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--navy-dark);
-            color: var(--white);
-            overflow-x: hidden;
-        }
-
-        /* Top Bar */
-        .top-bar {
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 25, 47, 0.95);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            position: fixed;
-            width: 100%;
-            box-sizing: border-box;
-            z-index: 1000;
-        }
-
-        .sn-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        .sn-brand img {
-            height: 35px;
-            width: auto;
-            border-radius: 4px;
-            display: block;
-        }
-
-        .sn-brand span { color: var(--gold); font-weight: bold; }
-
-        /* Hero Section - Fixed for Mobile */
+        /* قسم الواجهة الرئيسية */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(10, 25, 47, 0.75)), 
-                        url('https://lh3.googleusercontent.com/d/1UeMmG9H0ZYpDwVKvQZIDZY_Hrq6h6y3I=w1920');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: scroll; /* أفضل للموبايل */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
+            background: linear-gradient(rgba(5, 10, 18, 0.7), rgba(5, 10, 18, 0.95)), 
+                        url('https://i.ibb.co/nsz3tDyM/unnamed-1.jpg');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;
         }
 
-        /* Stats Grid */
-        .stats-section {
-            padding: 80px 5%;
-            background: var(--navy-light);
+        h1 { font-size: clamp(2.2rem, 8vw, 4.8rem); color: var(--gold); margin: 10px 0; font-weight: 900; letter-spacing: -1px; }
+        .jv-label { background: var(--gold); color: var(--navy); padding: 8px 30px; border-radius: 50px; font-weight: bold; margin-bottom: 25px; font-size: 1.1rem; }
+
+        /* الأرقام الاقتصادية لعام 2026 */
+        .investment-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px; width: 100%; max-width: 1100px; margin-top: 50px;
         }
+        .stat-card { background: var(--card-bg); padding: 35px; border-radius: 15px; border-top: 4px solid var(--gold); backdrop-filter: blur(10px); transition: 0.3s; }
+        .stat-card:hover { transform: translateY(-10px); background: rgba(197, 160, 89, 0.08); }
+        .stat-card h3 { color: var(--gold); font-size: 2.8rem; margin: 0; }
+        .stat-card p { font-size: 0.95rem; color: #bbb; margin-top: 8px; }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+        /* مميزات الشراكة وشروط الشريك */
+        .content-section { padding: 80px 10%; background: #070e1a; }
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        .box-info h2 { color: var(--gold); border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 25px; }
+        .list-item { margin-bottom: 20px; border-right: 3px solid var(--gold); padding-right: 15px; }
+        .list-item strong { color: var(--gold); display: block; font-size: 1.2rem; }
 
-        .card {
-            background: var(--navy-dark);
-            padding: 40px 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            text-align: center;
-        }
-
-        .card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
-
-        /* CTA Footer */
-        .cta-footer {
-            background: var(--navy-dark);
-            padding: 60px 5% 100px;
-            text-align: center;
-            border-top: 3px solid var(--gold);
-        }
-
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1rem;
-        }
-
+        /* شريط تواصل B2B احترافي */
+        .contact-footer { position: fixed; bottom: 30px; display: flex; gap: 15px; width: 95%; max-width: 750px; left: 50%; transform: translateX(-50%); z-index: 1000; }
+        .btn { flex: 1; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.4s; box-shadow: 0 10px 40px rgba(0,0,0,0.6); font-size: 1rem; }
+        .btn-call { background: var(--gold); color: var(--navy); }
         .btn-wa { background: #25d366; color: white; }
-        .btn-call { background: var(--gold); color: var(--navy-dark); }
-        .btn-mail { border: 2px solid var(--gold); color: var(--gold); }
+        .btn-mail { background: #007bff; color: white; }
+        .btn:hover { transform: scale(1.05); }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .btn-group { flex-direction: column; }
-            .btn { justify-content: center; }
-        }
+        @media (max-width: 768px) { .hero { height: auto; padding: 120px 20px; } .contact-footer { bottom: 15px; flex-wrap: wrap; } .btn { width: 48%; } .btn-mail { width: 100%; } }
     </style>
 </head>
 <body>
 
-    <header class="top-bar">
-        <a href="https://snapthename.com" class="sn-brand">
-            <img src="https://lh3.googleusercontent.com/d/1ooKkbEgtRaZzhJvZRlw3Ttpf242QUBJG=s200" alt="Logo">
-            Powered by <span>SnapTheName.com</span>
-        </a>
-    </header>
+    <div class="brand-logo">
+        <img src="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" alt="Snap the Name">
+    </div>
 
     <section class="hero">
-        <div style="background: rgba(212,175,55,0.15); padding: 5px 20px; border-radius: 20px; color: var(--gold); margin-bottom: 20px; border: 1px solid var(--gold);">
-            PREMIUM DOMAIN
-        </div>
-        <h1 style="color: var(--gold); margin: 0;">SuezCanalLogistics.com</h1>
-        <p>الواجهة الرقمية الأكثر استراتيجية في قطاع اللوجستيات العالمي.</p>
-    </section>
+        <div class="jv-label">فرصة شراكة استراتيجية (Joint Venture)</div>
+        <h1>SuezCanalLogistics.com</h1>
+        <p style="font-size: 1.5rem; color: #ccc; max-width: 900px;">السيطرة الرقمية على الواجهة اللوجستية لأهم ممر ملاحي في العالم</p>
 
-    <section class="stats-section">
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>$21.5B</h3>
-                <p>استثمارات المنطقة الاقتصادية للقناة (SCZONE)</p>
+        <div class="investment-grid">
+            <div class="stat-card">
+                <h3>+449M $</h3>
+                <p>إيرادات القناة مطلع 2026</p>
             </div>
-            <div class="card">
-                <i class="fas fa-ship"></i>
-                <h3>12%</h3>
-                <p>من التجارة العالمية تمر عبر القناة</p>
+            <div class="stat-card">
+                <h3>18.5%</h3>
+                <p>نمو سنوي في العوائد</p>
             </div>
-            <div class="card">
-                <i class="fas fa-globe"></i>
-                <h3>Top SEO</h3>
-                <p>تصدر نتائج البحث في قطاع اللوجستيات</p>
+            <div class="stat-card">
+                <h3>150B $</h3>
+                <p>استثمارات مرتقبة بالمحور</p>
+            </div>
+            <div class="stat-card">
+                <h3>1,300+</h3>
+                <p>سفينة عبرت مطلع 2026</p>
             </div>
         </div>
     </section>
 
-    <section class="cta-footer">
-        <h2 style="color: var(--gold);">استحوذ على مستقبلك الرقمي اليوم</h2>
-        <div class="btn-group">
-            <a href="tel:+201000001802" class="btn btn-call">
-                <i class="fas fa-phone"></i> اتصال
-            </a>
-            <a href="https://wa.me/201000001802" class="btn btn-wa">
-                <i class="fab fa-whatsapp"></i> واتساب
-            </a>
-            <a href="mailto:hussein.lashin@snapthename.com" class="btn btn-mail">
-                <i class="fas fa-envelope"></i> البريد
-            </a>
+    <section class="content-section">
+        <div class="grid-layout">
+            <div class="box-info">
+                <h2>مميزات الشراكة</h2>
+                <div class="list-item">
+                    <strong>السيادة الرقمية</strong>
+                    <p>استحواذ فوري على الواجهة البديهية للخدمات اللوجستية في المنطقة الاقتصادية للقناة.</p>
+                </div>
+                <div class="list-item">
+                    <strong>كفاءة الاستهداف B2B</strong>
+                    <p>النطاق يوفر آلية جذب طبيعي لكبرى شركات الشحن والملاحة العالمية دون تكاليف إعلانية باهظة.</p>
+                </div>
+                <div class="list-item">
+                    <strong>أصل استثماري متنامي</strong>
+                    <p>قيمة الدومين مرتبطة بنمو القناة التي توفر الوقت والوقود بشكل هائل للتجارة الدولية.</p>
+                </div>
+            </div>
+
+            <div class="box-info">
+                <h2>الشروط العامة للشراكة</h2>
+                <div class="list-item">
+                    <strong>الملاءة التشغيلية</strong>
+                    <p>يشترط في الشريك أن يكون كياناً لوجستياً قائماً يمتلك سابقة أعمال دولية.</p>
+                </div>
+                <div class="list-item">
+                    <strong>التوافق الاستراتيجي</strong>
+                    <p>الالتزام بتطوير النطاق كمنصة خدمات رقمية متكاملة تخدم رؤية محور القناة.</p>
+                </div>
+                <div class="list-item">
+                    <strong>الجدية المالية</strong>
+                    <p>إثبات القدرة على ضخ الموارد اللازمة لمواكبة حجم الحركة الملاحية المتنامية.</p>
+                </div>
+            </div>
         </div>
-        <p style="margin-top: 40px; color: var(--gray); font-size: 0.8rem;">&copy; 2026 SnapTheName Portfolio</p>
     </section>
+
+    <div class="contact-footer">
+        <a href="tel:+201000001802" class="btn btn-call"><i class="fas fa-phone"></i> ناقش الشراكة</a>
+        <a href="https://wa.me/201000001802" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
+        <a href="mailto:hussein.lashin@snapthename.com" class="btn btn-mail"><i class="fas fa-envelope"></i> البريد الرسمي</a>
+    </div>
 
 </body>
 </html>
