@@ -119,9 +119,16 @@
       text-align:right;
     }
     .disclaimer i{color:var(--gold)}
-    .disclaimer .en{direction:ltr; unicode-bidi:plaintext; display:block; margin-top:6px; color:rgba(255,255,255,.68); font-size:.92rem}
+    .disclaimer .en{
+      direction:ltr;
+      unicode-bidi:plaintext;
+      display:block;
+      margin-top:6px;
+      color:rgba(255,255,255,.68);
+      font-size:.92rem
+    }
 
-    /* Stats */
+    /* Signals (replaces KPIs) */
     .investment-grid{
       margin-top:34px;
       display:grid;
@@ -138,20 +145,45 @@
       backdrop-filter: blur(10px);
       transition:.25s ease;
       text-align:right;
+      min-height:150px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
     .stat-card:hover{transform:translateY(-6px); background:var(--card2)}
     .stat-card .kpi{
-      font-size:1.85rem;
+      font-size:1.05rem;
       font-weight:900;
       color:var(--gold);
       margin:0;
-      line-height:1.2;
+      line-height:1.35;
+      display:flex; align-items:center; gap:10px;
+      justify-content:flex-start;
     }
     .stat-card p{
       margin:8px 0 0;
       color:rgba(255,255,255,.72);
       font-size:.95rem;
     }
+    .mini-links{
+      margin-top:12px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .mini-link{
+      display:inline-flex; align-items:center; gap:7px;
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      text-decoration:none;
+      color:rgba(255,255,255,.80);
+      font-size:.92rem;
+      transition:.2s;
+    }
+    .mini-link:hover{transform:translateY(-2px); border-color:rgba(197,160,89,.35)}
+    .mini-link i{color:var(--gold)}
     .note{
       margin:14px auto 0;
       max-width:980px;
@@ -220,6 +252,41 @@
     }
     .uc p{margin:0; color:var(--muted); font-size:.98rem}
 
+    /* CTA blocks */
+    .cta-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(197,160,89,.35);
+      background:rgba(197,160,89,.10);
+      color:var(--white);
+      font-weight:900;
+      text-decoration:none;
+      cursor:pointer;
+      transition:.2s;
+    }
+    .pill:hover{transform:translateY(-2px)}
+    .pill i{color:var(--gold)}
+    .pill.primary{
+      background:var(--gold);
+      color:var(--navy);
+      border-color:transparent;
+    }
+    .pill.primary i{color:var(--navy)}
+
+    .listed-by{
+      margin-top:10px;
+      font-size:.95rem;
+      color:rgba(255,255,255,.70);
+    }
+    .listed-by b{color:rgba(255,255,255,.90)}
+
     /* Sources */
     .sources{
       display:flex; flex-wrap:wrap; gap:10px;
@@ -238,53 +305,6 @@
     }
     .source-link:hover{transform:translateY(-2px); border-color:rgba(197,160,89,.35)}
     .source-link i{color:var(--gold)}
-
-    /* Form */
-    form{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    input, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(0,0,0,.25);
-      color:var(--white);
-      outline:none;
-      font-size:1rem;
-    }
-    textarea{grid-column:1/-1; min-height:110px; resize:vertical}
-    input:focus, textarea:focus{
-      border-color:rgba(197,160,89,.55);
-      box-shadow:0 0 0 4px rgba(197,160,89,.12);
-    }
-    .form-actions{
-      grid-column:1/-1;
-      display:flex; gap:12px; flex-wrap:wrap;
-      margin-top:2px;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:12px 14px;
-      border-radius:999px;
-      border:1px solid rgba(197,160,89,.35);
-      background:rgba(197,160,89,.10);
-      color:var(--white);
-      font-weight:900;
-      text-decoration:none;
-      cursor:pointer;
-    }
-    .pill i{color:var(--gold)}
-    .pill.primary{
-      background:var(--gold);
-      color:var(--navy);
-      border-color:transparent;
-    }
-    .pill.primary i{color:var(--navy)}
-    button.pill{border:none}
 
     /* Sticky Contact Bar */
     .contact-footer{
@@ -330,7 +350,6 @@
       .investment-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
       .usecases{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
-      form{grid-template-columns:1fr}
       .hero{padding:132px 0 120px}
     }
   </style>
@@ -362,28 +381,51 @@
         <span class="en">Disclaimer: Independent domain asset listing. Not affiliated with any government entity.</span>
       </div>
 
-      <!-- KPIs (as market signals, not promises) -->
+      <!-- Market Signals (No numbers) -->
       <div class="investment-grid" role="list" aria-label="Market signals">
         <div class="stat-card" role="listitem">
-          <div class="kpi">449M$</div>
-          <p>مؤشر مُعلن/مُتداول (بداية 2026)*</p>
+          <div class="kpi"><i class="fa-solid fa-route"></i> إحصاءات ملاحية منشورة</div>
+          <p>مرجع رسمي لمتابعة بيانات العبور، الأخبار، والتحديثات.</p>
+          <div class="mini-links">
+            <a class="mini-link" href="https://www.suezcanal.gov.eg/English/Pages/default.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCA
+            </a>
+          </div>
         </div>
+
         <div class="stat-card" role="listitem">
-          <div class="kpi">18.5%</div>
-          <p>تغيّر سنوي مُعلن/مُتداول*</p>
+          <div class="kpi"><i class="fa-solid fa-industry"></i> منظومة SCZONE</div>
+          <p>سياق استثماري/تشغيلي مرتبط بالمناطق الصناعية واللوجستية.</p>
+          <div class="mini-links">
+            <a class="mini-link" href="https://www.sczone.eg/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> SCZONE
+            </a>
+          </div>
         </div>
+
         <div class="stat-card" role="listitem">
-          <div class="kpi">150B$</div>
-          <p>استثمارات مُعلنة/مُستهدفة للمحور*</p>
+          <div class="kpi"><i class="fa-solid fa-chart-line"></i> إعلانات وترويج استثماري</div>
+          <p>مرجع حكومي للسياق العام والفرص/البيانات المنشورة.</p>
+          <div class="mini-links">
+            <a class="mini-link" href="https://www.gafi.gov.eg/English/Pages/default.aspx" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> GAFI
+            </a>
+          </div>
         </div>
+
         <div class="stat-card" role="listitem">
-          <div class="kpi">1,300+</div>
-          <p>سفن مُعلنة/مُتداولة (بداية 2026)*</p>
+          <div class="kpi"><i class="fa-solid fa-shield-halved"></i> تموضع Brand-safe</div>
+          <p>الصفحة تتجنب أي إيحاء رسمي وتوضح استقلالية الأصل الرقمي.</p>
+          <div class="mini-links">
+            <a class="mini-link" href="https://www.icann.org/resources/pages/help/dndr/udrp-en" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> ICANN UDRP
+            </a>
+          </div>
         </div>
       </div>
 
       <p class="note">
-        *الأرقام أعلاه تُعرض كمؤشرات منشورة/متداولة وليست ضمانًا أو ادّعاءً رسميًا داخل هذا العرض. راجع المصادر أدناه.
+        تم استبدال الأرقام بمراجع رسمية مباشرة لضمان المصداقية وتقليل أي التباس أو ادعاءات غير موثقة.
       </p>
     </div>
   </header>
@@ -422,7 +464,7 @@
             </div>
             <div class="uc">
               <div class="t"><i class="fa-solid fa-shield"></i> Brand Protection</div>
-              <p>حماية التسمية جغرافيًا + منع التشابه + صفحة تعريفية رسمية للشركة/الخدمات.</p>
+              <p>حماية التسمية جغرافيًا + منع التشابه + صفحة تعريفية للشركة/الخدمات.</p>
             </div>
           </div>
         </div>
@@ -445,36 +487,40 @@
             <span>بدون إيحاء بصفة رسمية + تنويه واضح دائمًا على الموقع.</span>
           </div>
           <div class="item">
-            <strong>هدفنا خطوة واحدة الآن</strong>
+            <strong>خطوة واحدة الآن</strong>
             <span>وجّهني لصاحب القرار المسؤول عن الأصول الرقمية/البراند/الموقع.</span>
           </div>
         </div>
 
         <div class="card">
-          <h2><i class="fa-solid fa-envelope-open-text"></i> هيكلة الصفقة (بدون تعقيد)</h2>
+          <h2><i class="fa-solid fa-envelope-open-text"></i> تواصل بسرعة (B2B)</h2>
 
           <div class="item">
-            <strong>نقل الملكية</strong>
-            <span>نقل الدومين يتم عبر مُسجّل نطاقات معتمد (Registrar Transfer / Account Push) + اتفاق تحويل مختصر + فاتورة.</span>
+            <strong>هيكلة الصفقة (بدون تعقيد)</strong>
+            <span>نقل الملكية عبر مُسجّل نطاقات معتمد (Registrar Transfer / Account Push) + اتفاق تحويل مختصر + فاتورة.</span>
           </div>
           <div class="item">
             <strong>الدفع</strong>
             <span>تحويل بنكي / Wise / وسيلة متفق عليها حسب سياسة شركتكم.</span>
           </div>
 
-          <form action="mailto:hussein.lashin@snapthename.com" method="post" enctype="text/plain">
-            <input name="Company" placeholder="اسم الشركة" required />
-            <input name="Name" placeholder="اسمك" required />
-            <input name="Email" type="email" placeholder="البريد" required />
-            <input name="Role" placeholder="منصبك (اختياري)" />
-            <textarea name="Message" placeholder="اكتب: (وجّهني لصاحب القرار) + استخدامك المتوقع للدومين + وسيلة تواصل مناسبة"></textarea>
-            <div class="form-actions">
-              <button type="submit" class="pill primary"><i class="fa-solid fa-paper-plane"></i> أرسل رسالة رسمية</button>
-              <a class="pill" href="mailto:hussein.lashin@snapthename.com?subject=SuezCanalLogistics.com%20-%20Decision%20Maker%20Referral&body=Please%20refer%20me%20to%20the%20decision%20maker%20for%20domains%2Fdigital%20assets.%0A%0AUse-case%3A%20%0APhone%3A%20%0ACompany%3A%20">
-                <i class="fa-solid fa-arrow-right"></i> وجّهني لصاحب القرار
-              </a>
-            </div>
-          </form>
+          <div class="cta-row">
+            <a class="pill primary" href="mailto:hussein.lashin@snapthename.com?subject=SuezCanalLogistics.com%20-%20Decision%20Maker%20Referral&body=Please%20refer%20me%20to%20the%20decision%20maker%20for%20domains%2Fdigital%20assets.%0A%0ACompany%3A%0ARole%3A%0AUse-case%3A%0APhone%3A%0A">
+              <i class="fa-solid fa-arrow-right"></i> وجّهني لصاحب القرار
+            </a>
+
+            <a class="pill" href="mailto:hussein.lashin@snapthename.com?subject=SuezCanalLogistics.com%20-%20Inquiry">
+              <i class="fa-solid fa-envelope"></i> البريد الرسمي
+            </a>
+
+            <a class="pill" href="https://wa.me/201000001802" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i> واتساب سريع
+            </a>
+          </div>
+
+          <div class="listed-by">
+            Listed by <b>SnapTheName</b> — Hussein Lashin
+          </div>
         </div>
       </div>
     </div>
@@ -486,8 +532,9 @@
       <div class="card">
         <h2><i class="fa-solid fa-link"></i> مصادر رسمية (للتحقق والسياق)</h2>
         <p style="margin:0; color:rgba(255,255,255,.76)">
-          روابط مرجعية للسياق العام ولأي أرقام/إعلانات منشورة:
+          روابط مرجعية للسياق العام والبيانات المنشورة:
         </p>
+
         <div class="sources">
           <a class="source-link" href="https://www.suezcanal.gov.eg/English/Pages/default.aspx" target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-building-columns"></i> Suez Canal Authority
@@ -502,7 +549,7 @@
 
         <div class="disclaimer" style="margin-top:14px">
           <i class="fa-solid fa-scale-balanced"></i>
-          <strong>ملاحظة قانونية:</strong> هذا العرض يخص “اسم نطاق”. لا يمثل بيانًا رسميًا أو تعهدًا، وأي أرقام يجب التحقق منها من المصادر.
+          <strong>ملاحظة قانونية:</strong> هذا العرض يخص “اسم نطاق”. لا يمثل بيانًا رسميًا أو تعهدًا، وأي معلومات يجب التحقق منها من مصادرها الرسمية.
         </div>
       </div>
     </div>
