@@ -1,130 +1,526 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuezCanalLogistics.com | الشراكة الرقمية الاستراتيجية 2026</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --gold: #c5a059; --navy: #050a12; --white: #ffffff; --card-bg: rgba(255, 255, 255, 0.03); }
-        body { margin: 0; padding: 0; background: var(--navy); color: white; font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
-        
-        /* الهوية البصرية Snap the Name */
-        .brand-logo { position: absolute; top: 25px; right: 25px; z-index: 100; }
-        .brand-logo img { width: 150px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SuezCanalLogistics.com | أصل رقمي B2B لقطاع اللوجستيات</title>
 
-        /* قسم الواجهة الرئيسية */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(5, 10, 18, 0.7), rgba(5, 10, 18, 0.95)), 
-                        url('https://i.ibb.co/nsz3tDyM/unnamed-1.jpg');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;
-        }
+  <meta name="description" content="SuezCanalLogistics.com — أصل رقمي B2B مناسب لبوابة خدمات لوجستية، دليل مزودين، أو منصة توليد عملاء في محيط محور قناة السويس. عرض مستقل وغير تابع لأي جهة حكومية." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" />
 
-        h1 { font-size: clamp(2.2rem, 8vw, 4.8rem); color: var(--gold); margin: 10px 0; font-weight: 900; letter-spacing: -1px; }
-        .jv-label { background: var(--gold); color: var(--navy); padding: 8px 30px; border-radius: 50px; font-weight: bold; margin-bottom: 25px; font-size: 1.1rem; }
+  <!-- Open Graph -->
+  <meta property="og:title" content="SuezCanalLogistics.com | أصل رقمي B2B" />
+  <meta property="og:description" content="بوابة محتملة لخدمات لوجستية، دليل مزودين، أو منصة توليد عملاء — مع تنويه واضح." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.ibb.co/nsz3tDyM/unnamed-1.jpg" />
 
-        /* الأرقام الاقتصادية لعام 2026 */
-        .investment-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; width: 100%; max-width: 1100px; margin-top: 50px;
-        }
-        .stat-card { background: var(--card-bg); padding: 35px; border-radius: 15px; border-top: 4px solid var(--gold); backdrop-filter: blur(10px); transition: 0.3s; }
-        .stat-card:hover { transform: translateY(-10px); background: rgba(197, 160, 89, 0.08); }
-        .stat-card h3 { color: var(--gold); font-size: 2.8rem; margin: 0; }
-        .stat-card p { font-size: 0.95rem; color: #bbb; margin-top: 8px; }
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        /* مميزات الشراكة وشروط الشريك */
-        .content-section { padding: 80px 10%; background: #070e1a; }
-        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .box-info h2 { color: var(--gold); border-bottom: 2px solid var(--gold); display: inline-block; margin-bottom: 25px; }
-        .list-item { margin-bottom: 20px; border-right: 3px solid var(--gold); padding-right: 15px; }
-        .list-item strong { color: var(--gold); display: block; font-size: 1.2rem; }
+  <style>
+    :root{
+      --gold:#c5a059;
+      --navy:#050a12;
+      --bg:#070e1a;
+      --white:#fff;
+      --muted:rgba(255,255,255,.72);
+      --card:rgba(255,255,255,.04);
+      --card2:rgba(197,160,89,.08);
+      --stroke:rgba(197,160,89,.25);
+      --shadow:0 10px 40px rgba(0,0,0,.55);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--navy);
+      color:var(--white);
+      font-family:"Segoe UI", Tahoma, system-ui, -apple-system, Arial, sans-serif;
+      line-height:1.75;
+    }
+    a{color:inherit}
+    .container{max-width:1120px; margin:0 auto; padding:0 18px;}
 
-        /* شريط تواصل B2B احترافي */
-        .contact-footer { position: fixed; bottom: 30px; display: flex; gap: 15px; width: 95%; max-width: 750px; left: 50%; transform: translateX(-50%); z-index: 1000; }
-        .btn { flex: 1; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.4s; box-shadow: 0 10px 40px rgba(0,0,0,0.6); font-size: 1rem; }
-        .btn-call { background: var(--gold); color: var(--navy); }
-        .btn-wa { background: #25d366; color: white; }
-        .btn-mail { background: #007bff; color: white; }
-        .btn:hover { transform: scale(1.05); }
+    /* Logo */
+    .brand-logo{
+      position:fixed;
+      top:calc(18px + env(safe-area-inset-top));
+      right:18px;
+      z-index:50;
+      display:flex; align-items:center; gap:10px;
+    }
+    .brand-logo img{
+      width:140px;
+      height:auto;
+      filter:drop-shadow(0 4px 12px rgba(0,0,0,.55));
+    }
 
-        @media (max-width: 768px) { .hero { height: auto; padding: 120px 20px; } .contact-footer { bottom: 15px; flex-wrap: wrap; } .btn { width: 48%; } .btn-mail { width: 100%; } }
-    </style>
+    /* Hero */
+    .hero{
+      min-height:100svh;
+      padding:140px 0 110px;
+      background:
+        linear-gradient(rgba(5,10,18,.65), rgba(5,10,18,.96)),
+        url('https://i.ibb.co/nsz3tDyM/unnamed-1.jpg');
+      background-size:cover;
+      background-position:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .badge-row{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .badge{
+      background:rgba(197,160,89,.14);
+      border:1px solid var(--stroke);
+      color:var(--white);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:.98rem;
+      backdrop-filter: blur(10px);
+    }
+    .badge strong{color:var(--gold)}
+    h1{
+      margin:8px 0 10px;
+      font-size:clamp(2.1rem, 7.5vw, 4.6rem);
+      color:var(--gold);
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+    .domain{
+      direction:ltr;
+      unicode-bidi:plaintext;
+      display:inline-block;
+    }
+    .sub{
+      max-width:920px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1.05rem, 2.1vw, 1.35rem);
+    }
+
+    /* Disclaimer (Hero) */
+    .disclaimer{
+      margin:16px auto 0;
+      max-width:980px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      padding:12px 14px;
+      border-radius:12px;
+      color:rgba(255,255,255,.78);
+      font-size:.95rem;
+      text-align:right;
+    }
+    .disclaimer i{color:var(--gold)}
+    .disclaimer .en{direction:ltr; unicode-bidi:plaintext; display:block; margin-top:6px; color:rgba(255,255,255,.68); font-size:.92rem}
+
+    /* Stats */
+    .investment-grid{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:14px;
+      width:100%;
+    }
+    .stat-card{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-top:4px solid var(--gold);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      backdrop-filter: blur(10px);
+      transition:.25s ease;
+      text-align:right;
+    }
+    .stat-card:hover{transform:translateY(-6px); background:var(--card2)}
+    .stat-card .kpi{
+      font-size:1.85rem;
+      font-weight:900;
+      color:var(--gold);
+      margin:0;
+      line-height:1.2;
+    }
+    .stat-card p{
+      margin:8px 0 0;
+      color:rgba(255,255,255,.72);
+      font-size:.95rem;
+    }
+    .note{
+      margin:14px auto 0;
+      max-width:980px;
+      color:rgba(255,255,255,.65);
+      font-size:.92rem;
+    }
+
+    /* Sections */
+    section.block{
+      background:var(--bg);
+      padding:74px 0;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:22px;
+      align-items:start;
+    }
+    .card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:22px 20px;
+    }
+    .card h2{
+      margin:0 0 14px;
+      color:var(--gold);
+      font-size:1.35rem;
+      border-bottom:1px solid rgba(197,160,89,.35);
+      padding-bottom:10px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .item{
+      padding:12px 0;
+      border-bottom:1px dashed rgba(255,255,255,.10);
+    }
+    .item:last-child{border-bottom:0}
+    .item strong{
+      display:block;
+      color:var(--white);
+      font-size:1.05rem;
+      margin-bottom:4px;
+    }
+    .item span{color:var(--muted); font-size:.98rem}
+
+    /* Use cases */
+    .usecases{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .uc{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(197,160,89,.18);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      text-align:right;
+    }
+    .uc .t{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900;
+      color:var(--gold);
+      margin-bottom:8px;
+    }
+    .uc p{margin:0; color:var(--muted); font-size:.98rem}
+
+    /* Sources */
+    .sources{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:12px;
+    }
+    .source-link{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      text-decoration:none;
+      color:rgba(255,255,255,.82);
+      transition:.2s;
+      font-size:.95rem;
+    }
+    .source-link:hover{transform:translateY(-2px); border-color:rgba(197,160,89,.35)}
+    .source-link i{color:var(--gold)}
+
+    /* Form */
+    form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(0,0,0,.25);
+      color:var(--white);
+      outline:none;
+      font-size:1rem;
+    }
+    textarea{grid-column:1/-1; min-height:110px; resize:vertical}
+    input:focus, textarea:focus{
+      border-color:rgba(197,160,89,.55);
+      box-shadow:0 0 0 4px rgba(197,160,89,.12);
+    }
+    .form-actions{
+      grid-column:1/-1;
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top:2px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(197,160,89,.35);
+      background:rgba(197,160,89,.10);
+      color:var(--white);
+      font-weight:900;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .pill i{color:var(--gold)}
+    .pill.primary{
+      background:var(--gold);
+      color:var(--navy);
+      border-color:transparent;
+    }
+    .pill.primary i{color:var(--navy)}
+    button.pill{border:none}
+
+    /* Sticky Contact Bar */
+    .contact-footer{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:calc(14px + env(safe-area-inset-bottom));
+      width:min(760px, 94%);
+      display:flex;
+      gap:10px;
+      z-index:60;
+      padding:10px;
+      border-radius:18px;
+      background:rgba(5,10,18,.68);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+    .btn{
+      flex:1;
+      padding:14px 12px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      transition:.2s;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .btn:focus{outline:none; box-shadow:0 0 0 4px rgba(197,160,89,.18)}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-call{background:var(--gold); color:var(--navy); border-color:transparent}
+    .btn-wa{background:#25d366; color:#fff; border-color:transparent}
+    .btn-mail{background:#1b6cff; color:#fff; border-color:transparent}
+
+    /* Footer spacing so content doesn't hide behind bar */
+    .spacer{height:110px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .investment-grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
+      .usecases{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+      .hero{padding:132px 0 120px}
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Brand -->
+  <div class="brand-logo" aria-label="SnapTheName">
+    <img src="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" alt="SnapTheName Logo" loading="lazy" />
+  </div>
 
-    <div class="brand-logo">
-        <img src="https://i.ibb.co/BHhQ5LHz/SNAP-THE-NAME.png" alt="Snap the Name">
-    </div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge-row">
+        <div class="badge"><strong>Digital Asset</strong> — مناسب لـ B2B</div>
+        <div class="badge">Acquisition / Partnership</div>
+        <div class="badge">Brand-safe positioning</div>
+      </div>
 
-    <section class="hero">
-        <div class="jv-label">فرصة شراكة استراتيجية (Joint Venture)</div>
-        <h1>SuezCanalLogistics.com</h1>
-        <p style="font-size: 1.5rem; color: #ccc; max-width: 900px;">السيطرة الرقمية على الواجهة اللوجستية لأهم ممر ملاحي في العالم</p>
+      <h1><span class="domain">SuezCanalLogistics.com</span></h1>
+      <p class="sub">
+        أصل رقمي واضح ومباشر لقطاع اللوجستيات — يصلح كبوابة خدمات، دليل مزودين، أو منصة توليد عملاء في محيط محور قناة السويس.
+      </p>
 
-        <div class="investment-grid">
-            <div class="stat-card">
-                <h3>+449M $</h3>
-                <p>إيرادات القناة مطلع 2026</p>
-            </div>
-            <div class="stat-card">
-                <h3>18.5%</h3>
-                <p>نمو سنوي في العوائد</p>
-            </div>
-            <div class="stat-card">
-                <h3>150B $</h3>
-                <p>استثمارات مرتقبة بالمحور</p>
-            </div>
-            <div class="stat-card">
-                <h3>1,300+</h3>
-                <p>سفينة عبرت مطلع 2026</p>
-            </div>
+      <div class="disclaimer">
+        <i class="fa-solid fa-circle-info"></i>
+        <strong>تنويه:</strong> هذا عرض “أصل رقمي (اسم نطاق)” مستقل وغير تابع لأي جهة حكومية. الاسم يُستخدم كمرجع جغرافي/قطاعي فقط.
+        <span class="en">Disclaimer: Independent domain asset listing. Not affiliated with any government entity.</span>
+      </div>
+
+      <!-- KPIs (as market signals, not promises) -->
+      <div class="investment-grid" role="list" aria-label="Market signals">
+        <div class="stat-card" role="listitem">
+          <div class="kpi">449M$</div>
+          <p>مؤشر مُعلن/مُتداول (بداية 2026)*</p>
         </div>
-    </section>
-
-    <section class="content-section">
-        <div class="grid-layout">
-            <div class="box-info">
-                <h2>مميزات الشراكة</h2>
-                <div class="list-item">
-                    <strong>السيادة الرقمية</strong>
-                    <p>استحواذ فوري على الواجهة البديهية للخدمات اللوجستية في المنطقة الاقتصادية للقناة.</p>
-                </div>
-                <div class="list-item">
-                    <strong>كفاءة الاستهداف B2B</strong>
-                    <p>النطاق يوفر آلية جذب طبيعي لكبرى شركات الشحن والملاحة العالمية دون تكاليف إعلانية باهظة.</p>
-                </div>
-                <div class="list-item">
-                    <strong>أصل استثماري متنامي</strong>
-                    <p>قيمة الدومين مرتبطة بنمو القناة التي توفر الوقت والوقود بشكل هائل للتجارة الدولية.</p>
-                </div>
-            </div>
-
-            <div class="box-info">
-                <h2>الشروط العامة للشراكة</h2>
-                <div class="list-item">
-                    <strong>الملاءة التشغيلية</strong>
-                    <p>يشترط في الشريك أن يكون كياناً لوجستياً قائماً يمتلك سابقة أعمال دولية.</p>
-                </div>
-                <div class="list-item">
-                    <strong>التوافق الاستراتيجي</strong>
-                    <p>الالتزام بتطوير النطاق كمنصة خدمات رقمية متكاملة تخدم رؤية محور القناة.</p>
-                </div>
-                <div class="list-item">
-                    <strong>الجدية المالية</strong>
-                    <p>إثبات القدرة على ضخ الموارد اللازمة لمواكبة حجم الحركة الملاحية المتنامية.</p>
-                </div>
-            </div>
+        <div class="stat-card" role="listitem">
+          <div class="kpi">18.5%</div>
+          <p>تغيّر سنوي مُعلن/مُتداول*</p>
         </div>
-    </section>
+        <div class="stat-card" role="listitem">
+          <div class="kpi">150B$</div>
+          <p>استثمارات مُعلنة/مُستهدفة للمحور*</p>
+        </div>
+        <div class="stat-card" role="listitem">
+          <div class="kpi">1,300+</div>
+          <p>سفن مُعلنة/مُتداولة (بداية 2026)*</p>
+        </div>
+      </div>
 
-    <div class="contact-footer">
-        <a href="tel:+201000001802" class="btn btn-call"><i class="fas fa-phone"></i> ناقش الشراكة</a>
-        <a href="https://wa.me/201000001802" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a>
-        <a href="mailto:hussein.lashin@snapthename.com" class="btn btn-mail"><i class="fas fa-envelope"></i> البريد الرسمي</a>
+      <p class="note">
+        *الأرقام أعلاه تُعرض كمؤشرات منشورة/متداولة وليست ضمانًا أو ادّعاءً رسميًا داخل هذا العرض. راجع المصادر أدناه.
+      </p>
     </div>
+  </header>
 
+  <!-- SECTION: VALUE + USE CASES -->
+  <section class="block">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <h2><i class="fa-solid fa-gem"></i> لماذا هذا الدومين “قابل للبيع”؟</h2>
+          <div class="item">
+            <strong>وضوح فوري (Instant Clarity)</strong>
+            <span>اسم جغرافي + قطاع = فهم سريع بدون شرح… وهذا نادر في B2B.</span>
+          </div>
+          <div class="item">
+            <strong>يخدم أكثر من نموذج أعمال</strong>
+            <span>Portal / Directory / Lead-gen / Brand protection… نفس الأصل يخدم مسارات متعددة.</span>
+          </div>
+          <div class="item">
+            <strong>تموضع محايد ومهني</strong>
+            <span>واجهة رقمية تجارية محايدة لا توحي بصفة رسمية — وهذا يزيد قابلية الاعتماد.</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="fa-solid fa-diagram-project"></i> 3 Use-Cases جاهزة للتنفيذ</h2>
+
+          <div class="usecases">
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-magnifying-glass"></i> Lead-Gen Portal</div>
+              <p>تجميع طلبات خدمات: 3PL، تخزين، تخليص، نقل بري… وتحويلها لمزودين.</p>
+            </div>
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-list-check"></i> Supplier Directory</div>
+              <p>دليل مزودين في نطاق المحور: شركات، خدمات، صفحات تعريفية قابلة للبحث.</p>
+            </div>
+            <div class="uc">
+              <div class="t"><i class="fa-solid fa-shield"></i> Brand Protection</div>
+              <p>حماية التسمية جغرافيًا + منع التشابه + صفحة تعريفية رسمية للشركة/الخدمات.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: TERMS + CONTACT -->
+  <section class="block" style="background:#060c16;">
+    <div class="container">
+      <div class="grid-2">
+        <div class="card">
+          <h2><i class="fa-solid fa-handshake"></i> ما الذي نبحث عنه؟</h2>
+          <div class="item">
+            <strong>كيان B2B جاد</strong>
+            <span>شركة لوجستية/منصة/مشغّل خدمات… أو مستثمر لديه خطة تشغيل واضحة.</span>
+          </div>
+          <div class="item">
+            <strong>التزام بالتموضع المحايد</strong>
+            <span>بدون إيحاء بصفة رسمية + تنويه واضح دائمًا على الموقع.</span>
+          </div>
+          <div class="item">
+            <strong>هدفنا خطوة واحدة الآن</strong>
+            <span>وجّهني لصاحب القرار المسؤول عن الأصول الرقمية/البراند/الموقع.</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2><i class="fa-solid fa-envelope-open-text"></i> هيكلة الصفقة (بدون تعقيد)</h2>
+
+          <div class="item">
+            <strong>نقل الملكية</strong>
+            <span>نقل الدومين يتم عبر مُسجّل نطاقات معتمد (Registrar Transfer / Account Push) + اتفاق تحويل مختصر + فاتورة.</span>
+          </div>
+          <div class="item">
+            <strong>الدفع</strong>
+            <span>تحويل بنكي / Wise / وسيلة متفق عليها حسب سياسة شركتكم.</span>
+          </div>
+
+          <form action="mailto:hussein.lashin@snapthename.com" method="post" enctype="text/plain">
+            <input name="Company" placeholder="اسم الشركة" required />
+            <input name="Name" placeholder="اسمك" required />
+            <input name="Email" type="email" placeholder="البريد" required />
+            <input name="Role" placeholder="منصبك (اختياري)" />
+            <textarea name="Message" placeholder="اكتب: (وجّهني لصاحب القرار) + استخدامك المتوقع للدومين + وسيلة تواصل مناسبة"></textarea>
+            <div class="form-actions">
+              <button type="submit" class="pill primary"><i class="fa-solid fa-paper-plane"></i> أرسل رسالة رسمية</button>
+              <a class="pill" href="mailto:hussein.lashin@snapthename.com?subject=SuezCanalLogistics.com%20-%20Decision%20Maker%20Referral&body=Please%20refer%20me%20to%20the%20decision%20maker%20for%20domains%2Fdigital%20assets.%0A%0AUse-case%3A%20%0APhone%3A%20%0ACompany%3A%20">
+                <i class="fa-solid fa-arrow-right"></i> وجّهني لصاحب القرار
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: SOURCES -->
+  <section class="block">
+    <div class="container">
+      <div class="card">
+        <h2><i class="fa-solid fa-link"></i> مصادر رسمية (للتحقق والسياق)</h2>
+        <p style="margin:0; color:rgba(255,255,255,.76)">
+          روابط مرجعية للسياق العام ولأي أرقام/إعلانات منشورة:
+        </p>
+        <div class="sources">
+          <a class="source-link" href="https://www.suezcanal.gov.eg/English/Pages/default.aspx" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-building-columns"></i> Suez Canal Authority
+          </a>
+          <a class="source-link" href="https://www.sczone.eg/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-industry"></i> SCZONE
+          </a>
+          <a class="source-link" href="https://www.gafi.gov.eg/English/Pages/default.aspx" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-chart-line"></i> GAFI
+          </a>
+        </div>
+
+        <div class="disclaimer" style="margin-top:14px">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <strong>ملاحظة قانونية:</strong> هذا العرض يخص “اسم نطاق”. لا يمثل بيانًا رسميًا أو تعهدًا، وأي أرقام يجب التحقق منها من المصادر.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer" aria-hidden="true"></div>
+
+  <!-- CONTACT BAR -->
+  <nav class="contact-footer" aria-label="Contact actions">
+    <a href="tel:+201000001802" class="btn btn-call" aria-label="Call">
+      <i class="fa-solid fa-phone"></i> ناقش الشراء
+    </a>
+    <a href="https://wa.me/201000001802" class="btn btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i> واتساب
+    </a>
+    <a href="mailto:hussein.lashin@snapthename.com?subject=SuezCanalLogistics.com%20-%20Inquiry" class="btn btn-mail" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i> البريد الرسمي
+    </a>
+  </nav>
 </body>
 </html>
